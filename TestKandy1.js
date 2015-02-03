@@ -314,17 +314,17 @@ test.describe('Kandy-Registration', function() {
 	// 						});
 	// });
 
-	// test.it('Get Fum OTP', function() {
-	// 					// driver.sleep(2000);
+	test.it('Get Fum OTP', function() {
+						// driver.sleep(2000);
 						
-	// 					chgriver.get('http://172.18.1.99:99/get?host=KANDY_DB_SITE&path=validation_getByPhone.xml&phone=%2B380934212701');
-	// 					chgriver.sleep(5000);
-	// 					chgriver.findElements(webdriver.By.className('line')).
-	// 						then(function(codes) {
-	// 							console.log(codes);
-	// 							codes[codes.length-1].getInnerHtml().then(function(html){console.log(html);});
-	// 							var codePos = codes.length-2;
-	// 							console.log(codePos);
+						chgriver.get('http://172.18.1.99:99/get?host=KANDY_DB_SITE&path=validation_getByPhone.xml&phone=%2B380934212701');
+						chgriver.sleep(5000);
+						chgriver.findElements(webdriver.By.className('line')).
+							then(function(codes) {
+								console.log(codes);
+								codes[codes.length-1].getInnerHtml().then(function(html){console.log(html);});
+								var codePos = codes.length-2;
+								console.log(codePos);
 							
 								var xpathCode = '//*[@id="collapsible0"]/div[1]/div[2]/div[' + codePos + ']/span/span[2]/span[2]';
 								console.log(xpathCode);
