@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="smoke" parallel="false">
+   <test name="Reeee" preserve-order="true">
+
+       <groups>
+       <define name="all">
+           <include name="functest"/>
+       </define>
+       <run>
+           <include name="all" />
+           <exclude name="failed" />
+       </run>
+   </groups>
+
+       <classes>
+            <class name="RegistrationTest.NewTest" />
+       </classes>
+
+    </test>
+</suite>

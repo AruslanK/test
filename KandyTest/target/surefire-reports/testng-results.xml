@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="smoke" duration-ms="13926" started-at="2015-04-07T09:32:06Z" finished-at="2015-04-07T09:32:20Z">
+    <groups>
+      <group name="functest">
+        <method signature="RegistrationTest.NewTest.NumberInput1()" name="NumberInput1" class="RegistrationTest.NewTest"/>
+        <method signature="RegistrationTest.NewTest.NumberInput3()" name="NumberInput3" class="RegistrationTest.NewTest"/>
+      </group>
+    </groups>
+    <test name="Reeee" duration-ms="13926" started-at="2015-04-07T09:32:06Z" finished-at="2015-04-07T09:32:20Z">
+      <class name="RegistrationTest.NewTest">
+        <test-method status="PASS" signature="setUpTest()" name="setUpTest" is-config="true" duration-ms="6956" started-at="2015-04-07T09:32:06Z" finished-at="2015-04-07T09:32:13Z">
+        </test-method>
+        <test-method status="PASS" signature="NumberInput1()" name="NumberInput1" duration-ms="5462" started-at="2015-04-07T09:32:13Z" finished-at="2015-04-07T09:32:18Z">
+        </test-method>
+        <test-method status="PASS" signature="NumberInput3()" name="NumberInput3" duration-ms="1293" started-at="2015-04-07T09:32:18Z" finished-at="2015-04-07T09:32:20Z">
+        </test-method>
+        <test-method status="PASS" signature="shutDown()" name="shutDown" is-config="true" duration-ms="207" started-at="2015-04-07T09:32:20Z" finished-at="2015-04-07T09:32:20Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
