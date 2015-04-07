@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class NewTest extends AbstractTest{
 	
 	@Test(groups = "functest")
-
+//comment
 	public void NumberInput1() {
 		System.out.println("This should run");
 		newPage.inputNumber(param.getNumber()[0]);
