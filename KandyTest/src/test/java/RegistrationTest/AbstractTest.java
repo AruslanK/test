@@ -31,8 +31,8 @@ public class AbstractTest {
 //		driver = new FirefoxDriver();
 		
 		//initiate chrome driver to run remotely
-		DesiredCapabilities dc = DesiredCapabilities.firefox();
-		dc.
+//		DesiredCapabilities dc = DesiredCapabilities.firefox();
+//		dc.setCapability();
 //		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
 		
 		newPage = new RegistrationPage(driver);
