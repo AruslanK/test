@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegistrationPage extends AbstarctPage {
 	
@@ -10,10 +11,22 @@ public class RegistrationPage extends AbstarctPage {
 	public RegistrationPage(WebDriver driver) {
 		super(driver);
 	}
-				
-	public ActivationPage clickContiunueButton() {
-		return new ActivationPage(driver);
+	
+	//find and get text under the number field.
+	public String getTextAboveNumberField() {
+		waitUntilVisible(textAboveNF);
+		return textAboveNF.getText();
 	}
+	
+	public Boolean linkIsPresent() {
+		waitUntilVisible(linkUnderContinue);
+		return linkUnderContinue.isDisplayed();
+	}
+	
+//	public ActivationPage clickContiunueButton() {
+//		return new ActivationPage(driver);
+//	}
+	
 	// input number to number field
 	public RegistrationPage inputNumber(String number) {
 
@@ -41,6 +54,7 @@ public class RegistrationPage extends AbstarctPage {
 		System.out.println(inputField.getAttribute("value"));
 		return inputField.getAttribute("value");
 	}
+	
 	public ActivationPage goToActivationPage(){
 		continueButton.click();
 		return PageFactory.initElements(driver, ActivationPage.class);

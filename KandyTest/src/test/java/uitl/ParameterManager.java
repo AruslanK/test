@@ -3,6 +3,7 @@ package uitl;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import javax.mail.Folder;
@@ -17,6 +18,9 @@ public class ParameterManager {
 	
 	private String firstNumber;
 	private String secondNumber;
+	private String textAboveNumberField;
+	
+	private ArrayList <String> paramArray = new ArrayList <String>();;
 
 	public void generateProp() {
 		Properties prop = new Properties();
@@ -26,16 +30,19 @@ public class ParameterManager {
 			input = new FileInputStream("src/parameters.properties");
 			prop.load(input);
 			
+			textAboveNumberField = prop.get("textAboveNF").toString();
 			firstNumber = prop.get("number1").toString();
 			secondNumber = prop.get("number2").toString();
-		
+			paramArray.add(firstNumber);
+			paramArray.add(secondNumber);
+			paramArray.add(textAboveNumberField);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 	}
-	public String[] getNumber() {
-		return  new String[] {firstNumber, secondNumber};
+	public String getValue(int index) {
+		return  paramArray.get(index);
 	}
 	
 	//Get OTP from mail

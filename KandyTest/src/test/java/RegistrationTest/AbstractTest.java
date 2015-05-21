@@ -36,7 +36,8 @@ public class AbstractTest {
 //		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
 		
 		newPage = new RegistrationPage(driver);
-		newPage = newPage.goToRegistrationPage(); 
+		newPage = newPage.goToRegistrationPage();
+		driver.manage().window().maximize();
 //		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	 
 	}

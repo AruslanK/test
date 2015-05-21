@@ -15,7 +15,7 @@ public class AbstarctPage extends Elements{
 	
 	public AbstarctPage(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, 30000);
+		wait = new WebDriverWait(driver, 30);
 	}
 	
 //	Elements elem = PageFactory.initElements(driver, Elements.class);
@@ -34,5 +34,8 @@ public class AbstarctPage extends Elements{
 	public void waitUntilClickable(WebElement elm) {
 		wait.until((ExpectedConditions.elementToBeClickable(elm)));
 		
+	}
+	public void waitUntilVisible(WebElement elm) {
+		wait.until((ExpectedConditions.visibilityOf(elm)));
 	}
 }

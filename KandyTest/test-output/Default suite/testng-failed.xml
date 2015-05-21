@@ -5,10 +5,8 @@
     <classes>
       <class name="RegistrationTest.NewTest">
         <methods>
-          <include name="NumberInput2"/>
           <include name="NumberInput3"/>
           <include name="shutDown"/>
-          <include name="NumberInput1"/>
           <include name="setUpTest"/>
         </methods>
       </class> <!-- RegistrationTest.NewTest -->
