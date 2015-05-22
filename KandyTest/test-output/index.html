@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,11 +99,6 @@
                       <a href="#" panel-name="suite-smoke" class="show-methods passed suite-smoke"> (show)</a> <!-- show-methods passed suite-smoke -->
                     </span>
                     <div class="method-list-content passed suite-smoke">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-smoke" title="RegistrationTest.NewTest" hash-for-method="testUILink1">testUILink1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-smoke" title="RegistrationTest.NewTest" hash-for-method="testUINote1">testUINote1</a> <!-- method navigator-link -->
@@ -127,13 +122,6 @@
               <span class="class-name">RegistrationTest.NewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUILink1">
-                  </a> <!-- testUILink1 -->
-                  <span class="method-name">testUILink1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testUINote1">
@@ -193,10 +181,6 @@
               <span class="test-group-name">functest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testUILink1</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">testUINote1</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -217,20 +201,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testUILink1')
+data.setCell(0, 1, 'testUINote1')
 data.setCell(0, 2, 'RegistrationTest.NewTest')
-data.setCell(0, 3, 7944);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUINote1')
-data.setCell(1, 2, 'RegistrationTest.NewTest')
-data.setCell(1, 3, 1462);
+data.setCell(0, 3, 7350);
 window.suiteTableData['smoke']= { tableData: data, tableDiv: 'times-div-smoke'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-smoke">
               </div> <!-- times-div-smoke -->
             </div> <!-- times-div -->
@@ -262,16 +242,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testUILink1</span>
-                <span class="method-start">7828 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">testUINote1</span>
-                <span class="method-start">15847 ms</span>
+                <span class="method-start">6645 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">shutDown</span>
-                <span class="method-start">17311 ms</span>
+                <span class="method-start">14055 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

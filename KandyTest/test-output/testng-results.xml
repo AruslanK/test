@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="smoke" duration-ms="17347" started-at="2015-05-21T10:27:16Z" finished-at="2015-05-21T10:27:33Z">
+  <suite name="smoke" duration-ms="15664" started-at="2015-05-21T15:13:24Z" finished-at="2015-05-21T15:13:39Z">
     <groups>
       <group name="functest">
-        <method signature="NewTest.testUILink1()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="testUILink1" class="RegistrationTest.NewTest"/>
         <method signature="NewTest.testUINote1()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="testUINote1" class="RegistrationTest.NewTest"/>
       </group> <!-- functest -->
     </groups>
-    <test name="Reeee" duration-ms="17347" started-at="2015-05-21T10:27:16Z" finished-at="2015-05-21T10:27:33Z">
+    <test name="Reeee" duration-ms="15664" started-at="2015-05-21T15:13:24Z" finished-at="2015-05-21T15:13:39Z">
       <class name="RegistrationTest.NewTest">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="setUpTest" is-config="true" duration-ms="7826" started-at="2015-05-21T13:27:16Z" finished-at="2015-05-21T13:27:24Z">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="setUpTest" is-config="true" duration-ms="6623" started-at="2015-05-21T18:13:24Z" finished-at="2015-05-21T18:13:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="testUILink1()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="testUILink1" duration-ms="7944" started-at="2015-05-21T13:27:24Z" finished-at="2015-05-21T13:27:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUILink1 -->
-        <test-method status="PASS" signature="testUINote1()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="testUINote1" duration-ms="1462" started-at="2015-05-21T13:27:32Z" finished-at="2015-05-21T13:27:33Z">
+        <test-method status="PASS" signature="testUINote1()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="testUINote1" duration-ms="7350" started-at="2015-05-21T18:13:30Z" finished-at="2015-05-21T18:13:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUINote1 -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="shutDown" is-config="true" duration-ms="0" started-at="2015-05-21T13:27:33Z" finished-at="2015-05-21T13:27:33Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:RegistrationTest.NewTest@34c75a]" name="shutDown" is-config="true" duration-ms="1594" started-at="2015-05-21T18:13:38Z" finished-at="2015-05-21T18:13:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->

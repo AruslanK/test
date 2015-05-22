@@ -15,12 +15,12 @@ public class NewTest extends AbstractTest{
 
 	  }
 	
-	@Test(groups = "functest")
-	//comment checking link under Continue button
-		public void testUILink1() {
-			System.out.println("Check link under continue button");
-			Assert.assertTrue(newPage.linkIsPresent(), "link is present");
-	  }
+//	@Test(groups = "functest")
+//	//comment checking link under Continue button
+//		public void testUILink1() {
+//			System.out.println("Check link under continue button");
+//			Assert.assertTrue(newPage.linkIsPresent(), "link is present");
+//	  }
 	
 //	@Test(groups = "functest")
 ////comment
