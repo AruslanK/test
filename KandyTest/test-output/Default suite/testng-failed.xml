@@ -5,7 +5,8 @@
     <classes>
       <class name="RegistrationTest.NewTest">
         <methods>
-          <include name="NumberInput3"/>
+          <include name="testUINote1"/>
+          <include name="takeScreenShotOnFailure"/>
           <include name="shutDown"/>
           <include name="setUpTest"/>
         </methods>

@@ -1,9 +1,18 @@
 package RegistrationTest;
 
-import org.apache.bcel.verifier.exc.LinkingConstraintException;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
+
 
 public class NewTest extends AbstractTest{
 	
@@ -11,9 +20,23 @@ public class NewTest extends AbstractTest{
 	//comment checking text above number field
 		public void testUINote1() {
 			System.out.println("Check text above number field");
-			Assert.assertEquals(newPage.getTextAboveNumberField(), param.getValue(2), "Something wrong in text");
-
+			try {
+			Assert.assertEquals(newPage.getTextAboveNumberField(), param.getValue(2), "\n Something wrong in text");}
+			catch (Exception e){ Assert.fail();} //To fail test in case of any element identification failure 
 	  }
+	@AfterMethod(alwaysRun = true)
+	public void takeScreenShotOnFailure(ITestResult testResult) {
+		if (testResult.getStatus() == ITestResult.FAILURE) {
+			System.out.println("щас скриншотну"+testResult.getStatus());
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(scrFile, new File("D:\\testScreenShot.jpg"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	} 
 	
 //	@Test(groups = "functest")
 //	//comment checking link under Continue button
