@@ -12,6 +12,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import ru.yandex.qatools.allure.annotations.Attachment;
+
 
 
 public class NewTest extends AbstractTest{
@@ -19,24 +21,18 @@ public class NewTest extends AbstractTest{
 	@Test(groups = "functest")
 	//comment checking text above number field
 		public void testUINote1() {
+			makeAttach();
 			System.out.println("Check text above number field");
-			try {
-			Assert.assertEquals(newPage.getTextAboveNumberField(), param.getValue(2), "\n Something wrong in text");}
-			catch (Exception e){ Assert.fail();} //To fail test in case of any element identification failure 
-	  }
-	@AfterMethod(alwaysRun = true)
-	public void takeScreenShotOnFailure(ITestResult testResult) {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
-			System.out.println("щас скриншотну"+testResult.getStatus());
-			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			try {
-				FileUtils.copyFile(scrFile, new File("D:\\testScreenShot.jpg"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
+			Assert.assertEquals(newPage.getTextAboveNumberField(), param.getValue(2), "\n Something wrong in text");
 		}
-	} 
+		
+	@Attachment
+	public String makeAttach() {
+	    return "yeah, 2 is 2";
+	}
+	
+	
 	
 //	@Test(groups = "functest")
 //	//comment checking link under Continue button

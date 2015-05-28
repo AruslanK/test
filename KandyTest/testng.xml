@@ -3,6 +3,10 @@
 
 <suite name="smoke" parallel="false">
    <test name="Reeee" preserve-order="true">
+       
+       <listeners>
+       		<listener class-name="uitl.ListenerOne"/>	
+       </listeners>
 
        <groups>
        <define name="all">
