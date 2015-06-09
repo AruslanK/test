@@ -21,6 +21,10 @@ public class Elements {
 	@FindBy(xpath="//a[contains(@data-bind,'click: changeDomain')]")
 	protected WebElement linkUnderContinue;
 	
+	//flag icon
+	@FindBy(xpath="//div[contains(@class, 'flag flags UA')]")
+	protected WebElement flagIcon;
+	
 	//Activation Page
 	
 	// OTP field#1

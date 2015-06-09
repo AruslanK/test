@@ -21,6 +21,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import ru.yandex.qatools.allure.annotations.Attachment;
 import uitl.ParameterManager;
@@ -37,21 +38,26 @@ public class AbstractTest {
 	}
     	
 	@BeforeClass(alwaysRun = true)
-    public void setUpTest() throws MalformedURLException {
+	@Parameters("testBrowser")
+    public void setUpTest(String testBrowser) throws MalformedURLException {
 		param = new ParameterManager ();
 		param.generateProp();
 //		 initiate chrome driver to run locally
 //		System.setProperty("webdriver.chrome.driver",
 //				 "D:\\ProgrameForUse\\TestProject\\SeleniumTests\\chromedriver_win32\\chromedriver.exe");
-//
-		driver = new ChromeDriver();
-//		driver = new FirefoxDriver();
-		
-		//initiate chrome driver to run remotely
-//		DesiredCapabilities dc = DesiredCapabilities.firefox();
-//		dc.setCapability();
-//		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
-		
+		switch (testBrowser) {
+		case "Chrome":
+			driver = new ChromeDriver();
+			break;
+		case "Firefox":
+			driver = new FirefoxDriver();
+			//initiate chrome driver to run remotely
+//			DesiredCapabilities dc = DesiredCapabilities.firefox();
+//			dc.setCapability();
+//			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
+			break;
+		}
+	
 		newPage = new RegistrationPage(driver);
 		newPage = newPage.goToRegistrationPage();
 		driver.manage().window().maximize();
@@ -66,14 +72,7 @@ public class AbstractTest {
 	  	driver.quit();
 	  
 	}
-	
-//	@AfterMethod(alwaysRun = true)
-//	public void tear(ITestResult testResult) {
-//		takeScreenShotOnFailure(testResult);
-//		
-//	}
-	
-	
+
 
 
 }

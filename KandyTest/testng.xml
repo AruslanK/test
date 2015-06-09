@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="smoke" parallel="false">
-   <test name="Reeee" preserve-order="true">
+<suite name="KandyTests" parallel="false">
+   <test name="Registration" preserve-order="true">
        
        <listeners>
        		<listener class-name="uitl.ListenerOne"/>	
@@ -18,7 +18,9 @@
            <exclude name="failed" />
        </run>
    </groups>
-
+		
+       <parameter name="testBrowser" value="Chrome"/> 
+       
        <classes>
             <class name="RegistrationTest.NewTest" />
        </classes>

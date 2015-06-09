@@ -21,7 +21,7 @@ public class ListenerOne extends TestListenerAdapter {
 	        createAttachment(driver);
 	    }
 
-	    @Attachment("Hi, I'm attachment in your testng listener")
+	    @Attachment("Somthing wrong on this screen shot")
 	    public byte[]  createAttachment(WebDriver driver) {
 		    return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);			    
 		}

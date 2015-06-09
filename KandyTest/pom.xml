@@ -8,7 +8,8 @@
     <artifactId>FirstTestKandy</artifactId>
     <version>1.0.0</version>
     
-    
+    <name>Kandy Test</name>
+    <description>Attampt to use different frames</description>
     
     <properties>
         <allure.version>1.4.13</allure.version>
