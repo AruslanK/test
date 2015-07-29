@@ -25,6 +25,10 @@ public class Elements {
 	@FindBy(xpath="//div[contains(@class, 'flag flags UA')]")
 	protected WebElement flagIcon;
 	
+	//country code
+	@FindBy(xpath="//input[contains(@class, 'country-code extended')]")
+	protected WebElement countryCode;
+	
 	//Activation Page
 	
 	// OTP field#1

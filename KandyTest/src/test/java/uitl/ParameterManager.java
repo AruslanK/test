@@ -36,6 +36,8 @@ public class ParameterManager {
 			paramArray.add(firstNumber);
 			paramArray.add(secondNumber);
 			paramArray.add(textAboveNumberField);
+			paramArray.add(prop.get("flagIconClass").toString());
+			paramArray.add(prop.getProperty("countryCode").toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

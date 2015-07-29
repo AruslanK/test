@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="KandyTests" parallel="false">
-   <test name="Registration" preserve-order="true">
-       
+<suite name="KandyTests" parallel="false" verbose="1" thread-count="4">
+  	<tests>  
+   
+   <!-- <test name="RegistrationWIN" preserve-order="true"  > 
+      
        <listeners>
        		<listener class-name="uitl.ListenerOne"/>	
        </listeners>
@@ -18,12 +20,44 @@
            <exclude name="failed" />
        </run>
    </groups>
-		
-       <parameter name="testBrowser" value="Chrome"/> 
+		<parameters>
+        <parameter name="platform" value="Windows"/>
+       	<parameter name="testBrowser" value="Chrome"/>
+      	<parameter name="version" value="43.0" />
+   </parameters>
        
        <classes>
             <class name="RegistrationTest.NewTest" />
        </classes>
 
+    </test>   -->
+    <test name="RegistrationMAC" preserve-order="true"  > 
+      
+       <listeners>
+       		<listener class-name="uitl.ListenerOne"/>	
+       </listeners>
+
+       <groups>
+       <define name="all">
+           <include name="functest"/>
+           <include name="checkintest"/>
+       </define>
+       <run>
+           <include name="all" />
+           <exclude name="failed" />
+       </run>
+   </groups>
+   
+   <parameters>
+        <parameter name="platform" value="MAC"/>
+       	<parameter name="testBrowser" value="Chrome"/>
+      	<parameter name="version" value="43.0" />
+   </parameters>
+	          
+       <classes>
+            <class name="RegistrationTest.NewTest" />
+       </classes>
+
     </test>
+    </tests>
 </suite>

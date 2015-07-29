@@ -62,8 +62,14 @@ public class RegistrationPage extends AbstarctPage {
 		//		new ActivationPage(driver);
 	}
 	//get flag icon 
-	public void detectFlagIcon() {
+	public String detectFlagIcon() {
 		waitUntilVisible(flagIcon);
-		System.out.println(flagIcon.getClass());
+		return flagIcon.getAttribute("class");
 	}
+	//get flag icon 
+		public String detectCountryCode() {
+			waitUntilVisible(countryCode);
+			return countryCode.getAttribute("value");
+				
+		}
 }

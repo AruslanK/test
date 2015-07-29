@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="KandyTests" duration-ms="19114" started-at="2015-06-09T11:28:06Z" finished-at="2015-06-09T11:28:25Z">
+  <suite name="KandyTests" duration-ms="17841" started-at="2015-06-09T16:05:37Z" finished-at="2015-06-09T16:05:55Z">
     <groups>
       <group name="functest">
-        <method signature="NewTest.testUILink1()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="testUILink1" class="RegistrationTest.NewTest"/>
-        <method signature="NewTest.testUINote1()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="testUINote1" class="RegistrationTest.NewTest"/>
+        <method signature="NewTest.flagDetection()[pri:0, instance:RegistrationTest.NewTest@2d45ba]" name="flagDetection" class="RegistrationTest.NewTest"/>
       </group> <!-- functest -->
     </groups>
-    <test name="Registration" duration-ms="19114" started-at="2015-06-09T11:28:06Z" finished-at="2015-06-09T11:28:25Z">
+    <test name="Registration" duration-ms="17841" started-at="2015-06-09T16:05:37Z" finished-at="2015-06-09T16:05:55Z">
       <class name="RegistrationTest.NewTest">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="setUpTest" is-config="true" duration-ms="8391" started-at="2015-06-09T14:28:06Z" finished-at="2015-06-09T14:28:14Z">
+        <test-method status="PASS" signature="setUpTest(java.lang.String)[pri:0, instance:RegistrationTest.NewTest@2d45ba]" name="setUpTest" is-config="true" duration-ms="10178" started-at="2015-06-09T19:05:37Z" finished-at="2015-06-09T19:05:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="testUILink1()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="testUILink1" duration-ms="5622" started-at="2015-06-09T14:28:14Z" finished-at="2015-06-09T14:28:20Z">
+        <test-method status="PASS" signature="flagDetection()[pri:0, instance:RegistrationTest.NewTest@2d45ba]" name="flagDetection" duration-ms="4388" started-at="2015-06-09T19:05:48Z" finished-at="2015-06-09T19:05:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUILink1 -->
-        <test-method status="PASS" signature="testUINote1()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="testUINote1" duration-ms="1480" started-at="2015-06-09T14:28:20Z" finished-at="2015-06-09T14:28:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUINote1 -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:RegistrationTest.NewTest@153acfe]" name="shutDown" is-config="true" duration-ms="3526" started-at="2015-06-09T14:28:21Z" finished-at="2015-06-09T14:28:25Z">
+        </test-method> <!-- flagDetection -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:RegistrationTest.NewTest@2d45ba]" name="shutDown" is-config="true" duration-ms="3127" started-at="2015-06-09T19:05:52Z" finished-at="2015-06-09T19:05:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->

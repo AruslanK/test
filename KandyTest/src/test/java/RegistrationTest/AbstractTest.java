@@ -11,6 +11,7 @@ import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,6 +31,7 @@ import Pages.RegistrationPage;
 public class AbstractTest {
 	
 	protected WebDriver driver;
+	protected DesiredCapabilities dc;
 	protected RegistrationPage newPage;
 	protected ParameterManager param;
 	
@@ -38,23 +40,31 @@ public class AbstractTest {
 	}
     	
 	@BeforeClass(alwaysRun = true)
-	@Parameters("testBrowser")
-    public void setUpTest(String testBrowser) throws MalformedURLException {
+	@Parameters({"testBrowser", "platform", "version"})
+    public void setUpTest(String testBrowser, String platform, String version) throws MalformedURLException {
 		param = new ParameterManager ();
 		param.generateProp();
+		
 //		 initiate chrome driver to run locally
 //		System.setProperty("webdriver.chrome.driver",
 //				 "D:\\ProgrameForUse\\TestProject\\SeleniumTests\\chromedriver_win32\\chromedriver.exe");
-		switch (testBrowser) {
-		case "Chrome":
-			driver = new ChromeDriver();
+		switch(platform) {
+		case "Windows":
+//			driver = new ChromeDriver();
+			dc = DesiredCapabilities.chrome();
+			dc.setPlatform(Platform.WINDOWS);
+//			dc.setVersion(version);
+			driver = new RemoteWebDriver(new URL("http://172.24.223.124:4444/wd/hub"), dc);
+
 			break;
-		case "Firefox":
-			driver = new FirefoxDriver();
+		case "MAC":
+//			driver = new FirefoxDriver();
 			//initiate chrome driver to run remotely
-//			DesiredCapabilities dc = DesiredCapabilities.firefox();
-//			dc.setCapability();
-//			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
+			dc = DesiredCapabilities.chrome();
+			dc.setPlatform(Platform.MAC);
+			dc.setJavascriptEnabled(true);
+//			dc.setVersion(version);
+			driver = new RemoteWebDriver(new URL("http://172.24.223.124:4444/wd/hub"), dc);
 			break;
 		}
 	
@@ -68,8 +78,8 @@ public class AbstractTest {
 	@AfterClass(alwaysRun = true)
 	public void shutDown() {
 		System.out.print("check close");
-	  	driver.close();
-	  	driver.quit();
+//	  	driver.close();
+//	  	driver.quit();
 	  
 	}
 
